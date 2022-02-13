@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 
 const CardSearch = ({animes}) =>{
-  
+ 
   const YOUTUBE = 'https://www.youtube.com/watch?v='
   return(
     <Wrapper>

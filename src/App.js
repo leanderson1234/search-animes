@@ -2,6 +2,12 @@ import {useEffect, useState} from 'react'
 import styled from 'styled-components'
 
 import CardSearch from './components/CardSearch'
+import { useSelector,useDispatch } from 'react-redux'
+
+import {
+  animesAsync,
+  selectAnimes
+} from './features/animesSlice'
 
 const Container = styled.section`
   display: flex;
@@ -21,18 +27,17 @@ const Container = styled.section`
 function App() {
   const URI = 'https://kitsu.io/api/edge/anime'
   const [search,setSearch] = useState('');
+  const dispatch = useDispatch();
   /*
   * Para pesquisa por botão 
   * const [handle,setHandle] = useState(false);
   * const onClick = () => setHandle(!handle)
   * <button onClick={onClick}>Search</button>
   */
-  const [animes,setAnimes] = useState([]);
+  const animes = useSelector(selectAnimes);
 
   useEffect(async () =>{
-    const REQUEST = await fetch(`${URI}?filter[text]=${search}`)
-    const RESPONSE = await REQUEST.json()
-    setAnimes(RESPONSE)
+    dispatch(animesAsync(`${URI}?filter[text]=${search}`))
   },[search])
 
   return (

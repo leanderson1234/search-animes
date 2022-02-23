@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/search-animes/static/css/main.fb0015df.css",
+    "main.js": "/search-animes/static/js/main.dfa3c4be.js",
+    "static/js/787.7c327866.chunk.js": "/search-animes/static/js/787.7c327866.chunk.js",
+    "index.html": "/search-animes/index.html",
+    "main.fb0015df.css.map": "/search-animes/static/css/main.fb0015df.css.map",
+    "main.dfa3c4be.js.map": "/search-animes/static/js/main.dfa3c4be.js.map",
+    "787.7c327866.chunk.js.map": "/search-animes/static/js/787.7c327866.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fb0015df.css",
+    "static/js/main.dfa3c4be.js"
+  ]
+}
